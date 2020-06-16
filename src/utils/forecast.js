@@ -10,7 +10,7 @@ const forecast=(latitude,longitude,callback)=>{
         else if(body.message)
         callback('Unable to find location..Please try again!', undefined)
         else
-        callback(undefined,"It is currently "+body.main.temp+" degrees out")
+        callback(undefined,"Weather description: "+body.weather[0].description+".  It is currently "+body.main.temp+" degrees out. ")
         
     }) 
 
